@@ -57,6 +57,8 @@ form.addEventListener("submit", async (event) => {
 
         // Actualizar la lista
         mostrarProductos();
+
+         window.location.reload();
     } catch (error) {
         console.error("Error al crear el producto:", error);
     }
@@ -73,6 +75,8 @@ lista.addEventListener("click", async (event) => {
 
             // Actualizar la lista de productos después de eliminar uno
             mostrarProductos();
+
+             window.location.reload();
         } catch (error) {
             console.error("Error al eliminar el producto:", error);
         }
