@@ -1,5 +1,5 @@
 export async function listaProductos() {
-    const conexion = await fetch('https://fake-api-ashen-phi.vercel.app/productos', {
+    const conexion = await fetch("https://fake-api-ashen-phi.vercel.app/productos", {
         method: "GET",
         headers: {
             "Content-type": "application/json"
@@ -15,7 +15,7 @@ export async function listaProductos() {
 }
 
 export async function crearProducto(nombre, imagen, precio) {
-    const conexion = await fetch('https://fake-api-ashen-phi.vercel.app/productos', {
+    const conexion = await fetch("https://fake-api-ashen-phi.vercel.app/productos", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
