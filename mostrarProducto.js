@@ -3,7 +3,7 @@ import { listaProductos, crearProducto, eliminarProducto } from "./conectaAPI.js
 const form = document.querySelector("[data-form]");
 const lista = document.querySelector("[data-lista]");
 
-// Función para construir una tarjeta de producto
+// Construye los productos
 function construyeCard(nombre, imagen, precio, id) {
     const producto = document.createElement("li");
     producto.className = "producto__item";
@@ -21,7 +21,7 @@ function construyeCard(nombre, imagen, precio, id) {
     return producto;
 }
 
-// Función para mostrar la lista de productos
+// Muestra la lista de productos
 async function mostrarProductos() {
     try {
         const productos = await listaProductos();
@@ -41,7 +41,7 @@ function limpiarFormulario() {
     form.reset();
 }
 
-// Manejo del evento de envío del formulario para agregar productos
+// Envío del formulario
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const nombre = document.querySelector("[data-name]").value;
@@ -55,14 +55,14 @@ form.addEventListener("submit", async (event) => {
         // Limpiar el formulario
         limpiarFormulario();
 
-        // Actualizar la lista de productos después de agregar uno nuevo
+        // Actualizar la lista
         mostrarProductos();
     } catch (error) {
         console.error("Error al crear el producto:", error);
     }
 });
 
-// Manejo del evento de clic en el botón "Eliminar Producto"
+// "Eliminar Producto"
 lista.addEventListener("click", async (event) => {
     if (event.target.classList.contains("eliminar-producto")) {
         const id = event.target.dataset.id;
@@ -81,4 +81,3 @@ lista.addEventListener("click", async (event) => {
 
 // Mostrar la lista de productos al cargar la página
 mostrarProductos();
-
