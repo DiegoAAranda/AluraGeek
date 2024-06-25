@@ -3,7 +3,7 @@ import { listaProductos, crearProducto, eliminarProducto } from "./conectaAPI.js
 const form = document.querySelector("[data-form]");
 const lista = document.querySelector("[data-lista]");
 
-// Contruye los productos
+// Funci贸n para construir una tarjeta de producto
 function construyeCard(nombre, imagen, precio, id) {
     const producto = document.createElement("li");
     producto.className = "producto__item";
@@ -21,7 +21,7 @@ function construyeCard(nombre, imagen, precio, id) {
     return producto;
 }
 
-//Muetra la lista de productos
+// Funci贸n para mostrar la lista de productos
 async function mostrarProductos() {
     try {
         const productos = await listaProductos();
@@ -36,12 +36,12 @@ async function mostrarProductos() {
     }
 }
 
-// Funci髇 para limpiar inputs
+// Funci贸n para limpiar inputs
 function limpiarFormulario() {
     form.reset();
 }
 
-// Env韔 del formulario
+// Manejo del evento de env铆o del formulario para agregar productos
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const nombre = document.querySelector("[data-name]").value;
@@ -55,14 +55,14 @@ form.addEventListener("submit", async (event) => {
         // Limpiar el formulario
         limpiarFormulario();
 
-        // Actualizar la lista
+        // Actualizar la lista de productos despu茅s de agregar uno nuevo
         mostrarProductos();
     } catch (error) {
         console.error("Error al crear el producto:", error);
     }
 });
 
-// "Eliminar Producto"
+// Manejo del evento de clic en el bot贸n "Eliminar Producto"
 lista.addEventListener("click", async (event) => {
     if (event.target.classList.contains("eliminar-producto")) {
         const id = event.target.dataset.id;
@@ -71,7 +71,7 @@ lista.addEventListener("click", async (event) => {
             await eliminarProducto(id);
             console.log("Producto eliminado:", id);
 
-            // Actualizar la lista de productos despu閟 de eliminar uno
+            // Actualizar la lista de productos despu茅s de eliminar uno
             mostrarProductos();
         } catch (error) {
             console.error("Error al eliminar el producto:", error);
@@ -79,5 +79,6 @@ lista.addEventListener("click", async (event) => {
     }
 });
 
-// Mostrar la lista de productos al cargar la p醙ina
+// Mostrar la lista de productos al cargar la p谩gina
 mostrarProductos();
+
