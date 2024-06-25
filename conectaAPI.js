@@ -47,7 +47,6 @@ export async function eliminarProducto(id) {
         throw new Error("No fue posible eliminar el producto");
     }
 
-    const resultado = await conexion.json();
-    return resultado;
+    return conexion.json();
 }
 
