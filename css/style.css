@@ -1,0 +1,328 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #f44550;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+}
+
+#Alura {
+    display: flex;
+    flex-direction: row;
+}
+
+header h1{
+    font-size: 60px;
+    font-family: "Roboto Slab";
+    font-weight: 900;
+    align-self: end;
+}
+
+header h2{
+    margin: 0 20px;
+    font-size: 24px;
+    font-family: "Oswald";
+    font-weight: 500;
+    align-self: end;
+    background: #fb9299;
+    padding: 5px;
+    color: #ab3139;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background: #212121;
+    font-family: "Roboto";
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.productos_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 600px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+    height: 400px;
+    color: #ffffff;
+    background: #31302a;
+    padding: 100px 0;
+}
+
+.productos_container::-webkit-scrollbar {
+    display: none;
+}
+
+.producto__item {
+    background: #334591;
+    border-block: #334591 0px none;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+.producto__item:nth-of-type(4n), .producto__item:nth-of-type(4n-1) {
+    background: #f84451;
+    border-block: #f84451 0px none;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 5px 10px 5px 10px;
+}
+
+.imagen-producto img{
+    padding: 25px;
+    width: 200px;
+    height: 200px;
+    border-bottom: dashed 5px #ffffff;
+    margin: 5px;
+    background: #31302a;
+}
+
+.descripcion-producto {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.descripcion-producto h3{
+    font-weight: 600;
+    font-family: "Roboto";
+    font-size: 32px;
+    background: #002a41;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.producto__item:nth-of-type(4n-1) .descripcion-producto h3, .producto__item:nth-of-type(4n) .descripcion-producto h3 {
+    font-weight: 600;
+    font-family: "Roboto";
+    font-size: 24px;
+    background: #70020a;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+
+
+.descripcion-producto p {
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+.eliminar-producto {
+    font-family: "Roboto";
+    font-size: 20px;
+    background: #32799d;
+    border: none;
+    cursor: pointer;
+    border-block: #334591 0px none;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 5px 10px 5px 10px;
+    color: #ffffff;
+    box-shadow: none;
+    transition: 0.4s;
+}
+
+.eliminar-producto:hover{
+    transform:scale(1.2);
+}
+
+.producto__item:nth-of-type(4n-1) .eliminar-producto, .producto__item:nth-of-type(4n) .eliminar-producto {
+    background: #ab3139;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: initial;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+form input{
+    background: #4d644e;
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #ffffff;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px 10px 5px 10px;
+    margin: 10px 0px;
+    border: 0px;
+}
+
+form input::placeholder{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+form button{
+    border-radius: 5px 10px 5px 10px;
+    margin: 10px 0px;
+    background: #6cf172;
+    color: #117015;
+    font-family: "Roboto";
+    font-size: 32px;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+[data-image] {
+    width: 350px;
+}
+
+@media (max-width: 440px) {
+    header h1 {
+        font-size: 30px;
+        font-family: "Roboto Slab";
+        font-weight: 900;
+        align-self: end;
+    }
+
+    .productos_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    overflow-y: scroll;
+    color: #ffffff;
+    background: #31302a;
+    padding: 20px 0;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    }
+
+    .producto__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    }
+
+    [data-form]{
+        align-self: end;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 400px;
+    }
+
+    form input{
+        background: #4d644e;
+        font-family: "Roboto";
+        font-size: 20px;
+        color: #ffffff;
+        width: 250px;
+        padding: 10px;
+        border-radius: 5px 10px 5px 10px;
+        margin: 10px 0px;
+        border: 0px;
+    }
+
+    form input::placeholder{
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    form button{
+        border-radius: 5px 10px 5px 10px;
+        margin: 10px 0px;
+        background: #6cf172;
+        color: #117015;
+        font-family: "Roboto";
+        font-size: 32px;
+        padding: 20px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    [data-image] {
+        width: 275px;
+    }
+}    
+
+@media (max-width: 868px) {
+    .productos_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 20px 20px;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    align-content: baseline;
+    }
+
+    [data-form]{
+        align-self: end;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        flex-wrap: wrap;
+        width: 400px;
+    }
+
+    form input{
+        background: #4d644e;
+        font-family: "Roboto";
+        font-size: 20px;
+        color: #ffffff;
+        width: 250px;
+        padding: 10px;
+        border-radius: 5px 10px 5px 10px;
+        margin: 10px 0px;
+        border: 0px;
+    }
+
+    form input::placeholder{
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    form button{
+        border-radius: 5px 10px 5px 10px;
+        margin: 10px 0px;
+        background: #6cf172;
+        color: #117015;
+        font-family: "Roboto";
+        font-size: 24px;
+        padding: 20px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}

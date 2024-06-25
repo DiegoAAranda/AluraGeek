@@ -1,0 +1,40 @@
+{
+  "productos": [
+    {
+      "id": "c671",
+      "nombre": "Télefono",
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/copesa/JTRX576PZNCPPEDJUSUCZALQMM.webp",
+      "precio": "6000"
+    },
+    {
+      "id": "d1b0",
+      "nombre": "Laptop",
+      "imagen": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08490543.png",
+      "precio": "12000"
+    },
+    {
+      "id": "69b0",
+      "nombre": "Tablet",
+      "imagen": "https://images-cdn.ubuy.co.id/64c6221783bbd74f26794919-lenovo-tab-m10-plus-3rd-gen-10-tablet.jpg",
+      "precio": "7000"
+    },
+    {
+      "id": "ee7a",
+      "nombre": "Switch",
+      "imagen": "https://assets.nintendo.com/image/upload/f_auto/q_auto/c_fill,w_300/ncom/en_US/switch/system/three-modes-in-one",
+      "precio": "8000"
+    },
+    {
+      "id": "e63b",
+      "nombre": "Xbox",
+      "imagen": "https://assets.xboxservices.com/assets/34/72/34728a56-e88e-409d-9e6f-1e89aa82b25f.png?n=Console-Hub_Content-Placement-0_SeriesS-Duo_740x555.png",
+      "precio": "9000"
+    },
+    {
+      "id": "01b1",
+      "nombre": "Playstation",
+      "imagen": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
+      "precio": "9000"
+    }
+  ]
+}

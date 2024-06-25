@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="*">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>AluraGeek</title>
+</head>
+<body>
+    <header>
+        <div id="Alura">
+            <h1>AluraGeek</h1>
+            <h2>Alura LATAM</h2>
+        </div>
+    </header>
+    <main>
+        <ul class="productos_container" data-lista></ul>
+        <form data-form>
+            <input type="text" data-name placeholder="Nombre del producto" required>
+            <input type="number" step="0.01" data-price placeholder="Precio del producto" required>
+            <input type="url" data-image placeholder="URL de la imagen del producto" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </main>
+    <script type="module" src="./mostrarProducto.js"></script>
+</body>
+</html>
