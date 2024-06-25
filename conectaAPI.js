@@ -50,3 +50,4 @@ export async function eliminarProducto(id) {
     const resultado = await conexion.json();
     return resultado;
 }
+
